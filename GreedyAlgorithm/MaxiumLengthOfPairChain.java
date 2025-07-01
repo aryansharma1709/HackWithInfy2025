@@ -11,16 +11,17 @@ public class MaxiumLengthOfPairChain {
             arr[i][1]=sc.nextInt();
 
          }
-        System.out.println(personMeeeting(arr));
+        System.out.println(personMeeting(arr));
+        
     }
-    public static int personMeeeting(int [][]arr)
+    public static int personMeeting(int [][]arr)
     {
          Arrays.sort(arr, (a,b)->Integer.compare(a[1],b[1]));
         int cnt=1;
         int max=arr[0][1];
         for(int i=1;i<arr.length;i++)
         {
-            if(max<arr[i][0])
+            if(max<=arr[i][0])
             {
                 cnt++;
                 max=arr[i][1];
